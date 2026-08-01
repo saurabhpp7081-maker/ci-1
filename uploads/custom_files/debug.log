@@ -1,0 +1,2 @@
+[15208:15212:1128/175258.806:VERBOSE1:installer.cc(429)] "C:\Users\lenovo\Downloads\ChromeSetup.exe" --install=appguid={8A69D345-D564-463C-AFF1-A69D9E530F96}&iid={FB5870D1-EDEF-06F4-7DA4-B31F95BB1FDF}&lang=en&browser=5&usagestats=1&appname=Google%20Chrome&needsadmin=prefers&ap=x64-statsdef_1&brand=CHBF&installdataindex=empty --enable-logging --vmodule=*/components/winhttp/*=1,*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[15208:15212:1128/175546.148:VERBOSE1:installer.cc(538)] Metainstaller WMain returned: 73500, Windows error: 0

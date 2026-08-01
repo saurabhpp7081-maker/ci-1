@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="patel.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<title>CRUD Popup</title>
+ 
+</head>
+
+<body>
+    <video class="video-bg" autoplay muted loop>
+    <source src="/sp.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<button id="createFormDataModal">➕ Add New Data</button>
+
+<table border="1">
+<tr>
+<th>Name</th>
+<th>Father</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>saurabh patel</td>
+<td>swadfs</td>
+<td>1234567890</td>
+<td>dcsdcfdc@gmail.com</td>
+<td>
+<!-- <a href="?edit=16">✏️ Edit</a>
+<a href="?delete=16" onclick="return confirm('Delete?')">🗑 Delete</a> -->
+
+<a href="#" class="delete-btn" data-id="16">🗑 Delete</a>
+
+
+<a href="#" class="edit-btn"
+   data-id="16"
+   data-name="saurabh patel"
+   data-father="swadfs"
+   data-phone="1234567890"
+   data-email="dcsdcfdc@gmail.com">✏️ Edit</a>
+
+</td>
+</tr>
+</table>
+
+<!-- popup form    -->
+<div class="container" id="popup">
+<div class="login-box">
+<h3 >FORM DATA </h3>
+
+<form id="userForm">
+   <input type="hidden" name="id" value="">
+
+
+<input name="name" placeholder="Name" value="">
+<div class="error" id="nameErr"></div>
+
+<input name="father" placeholder="Father" value="">
+<div class="error" id="fatherErr"></div>
+
+<input name="phone" placeholder="Phone" value="">
+<div class="error" id="phoneErr"></div>
+
+<input name="email" placeholder="Email" value="">
+<div class="error" id="emailErr"></div>
+
+<button type="submit" name="save">SAVE</button>
+
+<button type="button" id="exit">EXIT</button>
+</form>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    // ADD BUTTON → popup open & form clear
+    $("#createFormDataModal").click(function(e){
+        e.preventDefault();
+        $("#popup").css("display","flex");
+
+        // Clear form for ADD mode
+        $("input[name='id']").val("");
+        $("input[name='name']").val("");
+        $("input[name='father']").val("");
+        $("input[name='phone']").val("");
+        $("input[name='email']").val("");
+
+        $(".error").text(""); // clear previous errors
+    });
+
+    // EXIT BUTTON → popup close
+    $("#exit").click(function(){
+        $("#popup").hide();
+    });
+
+    // PAGE LOAD Edit mode popup open
+        // LIVE ERROR CLEAR on focus or keypress
+$("#userForm input").on("focus input", function(){
+    $(this).next(".error").text(""); // clear the error for this field
+});
+
+
+    // AJAX FORM SUBMIT save & update without reload
+    $("#userForm").on("submit", function(e){
+        e.preventDefault(); 
+
+        $.ajax({
+            url: "validate.php",
+            type: "POST",
+            data: $(this).serialize(),
+            dataType: "json",
+            success: function(res){
+
+                // Clear previous errors
+                $(".error").text("");
+
+                // SHOW VALIDATION ERRORS
+                if(res.status === "error"){
+                    if(res.errors.name) $("#nameErr").text(res.errors.name);
+                    if(res.errors.father) $("#fatherErr").text(res.errors.father);
+                    if(res.errors.phone) $("#phoneErr").text(res.errors.phone);
+                    if(res.errors.email) $("#emailErr").text(res.errors.email);
+
+                    $("#popup").css("display","flex"); // popup stays open
+                }
+
+                // SUCCESS  reload table
+                if(res.status === "success"){
+                    alert("Data Saved Successfully ✅");
+                    location.reload(); // refresh table
+                }
+            },
+            error: function(xhr){
+                console.log("AJAX Error:", xhr.responseText);
+            }
+        });
+    });
+
+});
+// DELETE with AJAX
+$(document).on("click", ".delete-btn", function(e){
+    e.preventDefault();
+    let id = $(this).data("id");
+
+    if(confirm("Are you sure you want to delete?")) {
+        $.ajax({
+            url: "validate.php",
+            type: "POST",
+            data: { delete_id: id },
+            dataType: "json",
+            success: function(res){
+                 console.log(res); // Debugging line
+                if(res.status === "success"){
+                    alert("Deleted Successfully ✅");
+                    // Row remove without page reload
+                    $("a[data-id='"+id+"']").closest("tr").remove();
+                } else {
+                    alert("Delete Failed ❌");
+                }
+            },
+            error: function(xhr){
+                console.log("AJAX Error:", xhr.responseText);
+            }
+        });
+    }
+});
+
+// // EDIT with AJAX → open popup and fill form
+// $(document).on("click", ".edit-btn", function(e){
+//     e.preventDefault();
+    
+//     let id = $(this).data("id");
+//     let name = $(this).data("name");
+//     let father = $(this).data("father");
+//     let phone = $(this).data("phone");
+//     let email = $(this).data("email");
+
+//     // Fill form fields
+//     $("input[name='id']").val(id);
+//     $("input[name='name']").val(name);
+//     $("input[name='father']").val(father);
+//     $("input[name='phone']").val(phone);
+//     $("input[name='email']").val(email);
+
+//     $(".error").text(""); // clear previous errors
+
+//     $("#popup").css("display","flex");
+// });
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

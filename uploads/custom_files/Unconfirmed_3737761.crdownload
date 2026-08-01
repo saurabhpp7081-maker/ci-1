@@ -1,0 +1,310 @@
+
+<table border='1' cellpadding='8' cellspacing='0' style='border-collapse:collapse; width:100%;'>
+<tr style='background:#dbeafe; font-weight:bold; text-align:center;'>
+    <th>Sn.</th>
+      <th>Product Name</th>
+       <th>Purchase Year</th>
+           <th>Quantity</th>
+        <th>Original Cost</th>
+    <th>Year-1 </th>
+    <th>Year-2 </th>
+        <th>Year-3 </th>
+</tr>
+
+    <tr>
+        <td align='center'>1</td>
+        <td>Aladdin Pope</td>
+        <td align='center'>2014</td>
+        <td align='center'>3</td>
+        <td align='right'>1511.58</td>
+        <td align='right'>1375.54</td>
+        <td align='right'>1251.74</td>
+        <td align='right'>1139.08</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>2</td>
+        <td>Alice Juarez</td>
+        <td align='center'>2014</td>
+        <td align='center'>2</td>
+        <td align='right'>944</td>
+        <td align='right'>859.04</td>
+        <td align='right'>781.73</td>
+        <td align='right'>711.37</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>3</td>
+        <td>Alice Juarez</td>
+        <td align='center'>2014</td>
+        <td align='center'>2</td>
+        <td align='right'>944</td>
+        <td align='right'>859.04</td>
+        <td align='right'>781.73</td>
+        <td align='right'>711.37</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>4</td>
+        <td>saurabh</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>5</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>6</td>
+        <td>dsfddf</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>7</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>8</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>9</td>
+        <td>Camden Booker</td>
+        <td align='center'>2024</td>
+        <td align='center'>2</td>
+        <td align='right'>266.68</td>
+        <td align='right'>242.68</td>
+        <td align='right'>220.84</td>
+        <td align='right'>200.96</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>10</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2025</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>11</td>
+        <td>Yardley Aguilar</td>
+        <td align='center'>2022</td>
+        <td align='center'>2</td>
+        <td align='right'>1890.36</td>
+        <td align='right'>1720.23</td>
+        <td align='right'>1565.41</td>
+        <td align='right'>1424.52</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>12</td>
+        <td>Emily Christensen</td>
+        <td align='center'>1997</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>13</td>
+        <td>Tana Lewis</td>
+        <td align='center'>2017</td>
+        <td align='center'>5</td>
+        <td align='right'>2360</td>
+        <td align='right'>2147.6</td>
+        <td align='right'>1954.32</td>
+        <td align='right'>1778.43</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>14</td>
+        <td>Dora </td>
+        <td align='center'>1984</td>
+        <td align='center'>8</td>
+        <td align='right'>9071.84</td>
+        <td align='right'>8255.37</td>
+        <td align='right'>7512.39</td>
+        <td align='right'>6836.28</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>15</td>
+        <td>saurabh patel </td>
+        <td align='center'>2026</td>
+        <td align='center'>1</td>
+        <td align='right'>118</td>
+        <td align='right'>107.38</td>
+        <td align='right'>97.72</td>
+        <td align='right'>88.92</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>16</td>
+        <td>debhrdn</td>
+        <td align='center'>1982</td>
+        <td align='center'>2</td>
+        <td align='right'>236</td>
+        <td align='right'>214.76</td>
+        <td align='right'>195.43</td>
+        <td align='right'>177.84</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>17</td>
+        <td>Timothy Pitts</td>
+        <td align='center'>1987</td>
+        <td align='center'>3</td>
+        <td align='right'>782.34</td>
+        <td align='right'>711.93</td>
+        <td align='right'>647.86</td>
+        <td align='right'>589.55</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>18</td>
+        <td>Claudia Crosby</td>
+        <td align='center'>2019</td>
+        <td align='center'>3</td>
+        <td align='right'>2308.08</td>
+        <td align='right'>2100.35</td>
+        <td align='right'>1911.32</td>
+        <td align='right'>1739.3</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>19</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>23.6</td>
+        <td align='right'>21.48</td>
+        <td align='right'>19.54</td>
+        <td align='right'>17.78</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>20</td>
+        <td>Lee Rivera</td>
+        <td align='center'>1995</td>
+        <td align='center'>1</td>
+        <td align='right'>495.6</td>
+        <td align='right'>451</td>
+        <td align='right'>410.41</td>
+        <td align='right'>373.47</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>21</td>
+        <td>saurabh patel</td>
+        <td align='center'>2025</td>
+        <td align='center'>2</td>
+        <td align='right'>236</td>
+        <td align='right'>214.76</td>
+        <td align='right'>195.43</td>
+        <td align='right'>177.84</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>22</td>
+        <td>Ruby Glass</td>
+        <td align='center'>1998</td>
+        <td align='center'>2</td>
+        <td align='right'>87.32</td>
+        <td align='right'>79.46</td>
+        <td align='right'>72.31</td>
+        <td align='right'>65.8</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>23</td>
+        <td>Blake Farley</td>
+        <td align='center'>1988</td>
+        <td align='center'>2</td>
+        <td align='right'>51.92</td>
+        <td align='right'>47.25</td>
+        <td align='right'>42.99</td>
+        <td align='right'>39.13</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>24</td>
+        <td>Constance Lewis</td>
+        <td align='center'>1999</td>
+        <td align='center'>1</td>
+        <td align='right'>807.12</td>
+        <td align='right'>734.48</td>
+        <td align='right'>668.38</td>
+        <td align='right'>608.22</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>25</td>
+        <td>Ezra Peterson</td>
+        <td align='center'>2023</td>
+        <td align='center'>1</td>
+        <td align='right'>521.56</td>
+        <td align='right'>474.62</td>
+        <td align='right'>431.9</td>
+        <td align='right'>393.03</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>26</td>
+        <td>Madeson Mcfadden</td>
+        <td align='center'>2004</td>
+        <td align='center'>2</td>
+        <td align='right'>1810.12</td>
+        <td align='right'>1647.21</td>
+        <td align='right'>1498.96</td>
+        <td align='right'>1364.05</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>27</td>
+        <td>sasd</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>472</td>
+        <td align='right'>429.52</td>
+        <td align='right'>390.86</td>
+        <td align='right'>355.69</td>
+    </tr>
+    </table>

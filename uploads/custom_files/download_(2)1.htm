@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="top-bar">
+        <h2>ALL DATA FORM IS HERE</h2>
+        <button id="addDataBtn">➕ Add New Data</button>
+    </div>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+
+
+
+  <div class="container">
+        <div class="circle-container" id="circleContainer"></div>
+
+        <div class="login-box">
+            <h2>Login</h2>
+
+         <form method="post">
+
+    <div class="input-group">
+        <input type="text" name="name" placeholder="NAME" value="">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <input type="text" name="father" placeholder="FATHER'S NAME" value="">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <input type="number" name="phone" placeholder="PHONE" value="">
+        <small class="error"></small>
+    </div>
+
+    <div class="input-group">
+        <input type="email" name="email" placeholder="EMAIL" value="">
+        <small class="error"></small>
+    </div>
+
+    <button type="submit" class="login-btn">SAVE</button>
+</form>
+
+
+        
+            <div class="signup-link">
+                <a id="closePopup"  href="#">EXIT</a>
+            </div>
+        </div>
+    </div>
+
+
+
+     <script>
+        const circleContainer = document.getElementById('circleContainer');
+        const numBars = 50;
+        let activeBars = 0;
+
+        for (let i = 0; i < numBars; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.transform = `rotate(${(360 / numBars) * i}deg) translateY(-170px)`;
+            circleContainer.appendChild(bar);
+        }
+
+        function animateBars() {
+            const bars = document.querySelectorAll('.bar');
+
+            setInterval(() => {
+                bars[activeBars % numBars].classList.add('active');
+
+                if (activeBars > 8) {
+                    bars[(activeBars - 8) % numBars].classList.remove('active');
+                }
+
+                activeBars++;
+            }, 100);
+        }
+
+        animateBars();
+    const addBtn = document.getElementById("addDataBtn");
+    const container = document.querySelector(".container");
+
+    addBtn.addEventListener("click", () => {
+        container.style.display = "flex";
+    });
+
+     closePopup.addEventListener("click", () => {
+        container.style.display = "none";
+    });
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+    const errors = document.querySelectorAll(".error");
+    let hasError = false;
+
+    errors.forEach(error => {
+        if (error.innerText.trim() !== "") {
+            hasError = true;
+        }
+    });
+
+    if (hasError) {
+        e.preventDefault(); // form submit bhi nahi hoga
+        return;
+    }
+
+    // yahan PHP validation success hone ke baad
+    document.querySelector(".container").style.display = "none";
+});
+
+    </script>
+
+
+</body>
+</html>

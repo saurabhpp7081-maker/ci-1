@@ -1,0 +1,77 @@
+
+<table border="1" cellpadding="8" cellspacing="0" style="
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+">
+    <thead>
+        <tr style="
+            background-color: #198754;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+        ">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+                <tr>
+            <td>Emery Higgins</td>
+            <td>xywyjyxup@mailinator.com</td>
+            <td style="text-align:center;">+1 (216) 335-4069</td>
+            <td style="text-align:center;">New</td>
+        </tr>
+                <tr>
+            <td>Felicia Riggs</td>
+            <td>hyzysabyho@mailinator.com</td>
+            <td style="text-align:center;">+1 (692) 736-1965</td>
+            <td style="text-align:center;">Qualified</td>
+        </tr>
+                <tr>
+            <td>Signe Bartlett</td>
+            <td>taxama@mailinator.com</td>
+            <td style="text-align:center;">+1 (366) 657-7712</td>
+            <td style="text-align:center;">Qualified</td>
+        </tr>
+                <tr>
+            <td>Zephania Fletcher</td>
+            <td>roreny@mailinator.com</td>
+            <td style="text-align:center;">+1 (494) 289-8911</td>
+            <td style="text-align:center;">Qualified</td>
+        </tr>
+                <tr>
+            <td>Aretha Travis</td>
+            <td>zapyvavive@mailinator.com</td>
+            <td style="text-align:center;">+1 (489) 133-3684</td>
+            <td style="text-align:center;">Qualified</td>
+        </tr>
+                <tr>
+            <td>Walker Bullock</td>
+            <td>wetilohize@mailinator.com</td>
+            <td style="text-align:center;">+1 (316) 809-1055</td>
+            <td style="text-align:center;">Closed</td>
+        </tr>
+                <tr>
+            <td>Julian Roy</td>
+            <td>xavyruxit@mailinator.com</td>
+            <td style="text-align:center;">+1 (738) 826-8824</td>
+            <td style="text-align:center;">New</td>
+        </tr>
+                <tr>
+            <td>Adena Mullins</td>
+            <td>tuqo@mailinator.com</td>
+            <td style="text-align:center;">+1 (184) 259-3121</td>
+            <td style="text-align:center;">Closed</td>
+        </tr>
+                <tr>
+            <td>Mollie Donaldson</td>
+            <td>kejyz@mailinator.com</td>
+            <td style="text-align:center;">+1 (314) 471-9935</td>
+            <td style="text-align:center;">Contacted</td>
+        </tr>
+            </tbody>
+</table>
+

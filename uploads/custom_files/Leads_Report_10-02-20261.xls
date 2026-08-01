@@ -1,0 +1,214 @@
+﻿
+<table width="100%" border="1" cellspacing="0" cellpadding="0"
+       style="border-collapse:collapse; font-family:Calibri, Arial, sans-serif;">
+
+    <!-- TITLE -->
+    <tr>
+        <td colspan="3" style="
+            font-size:20px;
+            font-weight:bold;
+            text-align:center;
+            padding:14px;
+            color:#2f80ed;
+            border:none;
+        ">
+            Leads Report
+        </td>
+    </tr>
+
+    <!-- DATE -->
+    <tr>
+        <td colspan="3" style="
+            text-align:center;
+            font-size:12px;
+            color:#666;
+            padding-bottom:12px;
+            border:none;
+        ">
+            Generated on: 10 Feb 2026        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3" style="height:10px;border:none;"></td>
+    </tr>
+
+    <!-- HEADER ROW -->
+    <tr style="
+        background-color:#2f80ed;
+        color:#ffffff;
+        font-weight:bold;
+        text-align:center;
+    ">
+        <td style="padding:10px; border:1px solid #ddd;">Name</td>
+        <td style="padding:10px; border:1px solid #ddd;">Email</td>
+        <td style="padding:10px; border:1px solid #ddd;">Phone</td>
+    </tr>
+
+    <!-- DATA ROWS -->
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Emery Higgins            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                xywyjyxup@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (216) 335-4069            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Felicia Riggs            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                hyzysabyho@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (692) 736-1965            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Signe Bartlett            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                taxama@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (366) 657-7712            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Zephania Fletcher            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                roreny@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (494) 289-8911            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Aretha Travis            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                zapyvavive@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (489) 133-3684            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Walker Bullock            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                wetilohize@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (316) 809-1055            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Echo Camacho            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                kixidiq@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (908) 612-4053            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Aaron Mathis            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                syferihun@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (538) 321-8847            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Tana Ryan            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                murex@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (298) 819-3409            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Cameron Montoya            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                dyqufuv@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (416) 433-1127            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Eric Case            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                kutalydozy@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (906) 734-7675            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Timothy Everett            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                fovivototi@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (114) 907-9737            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Unity Mccullough            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                goqepij@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (395) 777-5502            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Caesar Washington            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                fopihipeg@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (805) 552-1592            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Teagan Reid            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                filirocowe@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (649) 158-5201            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Tarik Knowles            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                rybe@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (986) 634-6962            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Amela Fulton            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                dyjiqaqo@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (549) 388-7702            </td>
+        </tr>
+            <tr style="background-color:#f4f6f8;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Kennedy Farmer            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                fuwefyh@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (634) 983-7414            </td>
+        </tr>
+            <tr style="background-color:#ffffff;">
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                Wylie Evans            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd;">
+                sefip@mailinator.com            </td>
+            <td style="padding:8px 12px; border:1px solid #ddd; text-align:center;">
+                +1 (314) 814-6832            </td>
+        </tr>
+    
+    <tr>
+        <td colspan="3" style="
+            text-align:right;
+            font-size:11px;
+            color:#555;
+            padding:10px;
+            border-top:2px solid #333;
+            font-weight:bold;
+        ">
+            Total Records: 19        </td>
+    </tr>
+
+</table>
+

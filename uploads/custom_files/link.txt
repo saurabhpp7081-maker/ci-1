@@ -1,0 +1,149 @@
+
+<!-- /*
+
+  <?php   
+   die();
+ $x=10;
+ $y= 20;
+ echo $x + $y. "<br>" ; 
+ echo $x - $y ."<br>" ;
+ echo $x * $y." <br>" ;
+ echo $x / $y. " <br>" ;
+  ?>
+  <?php 
+   $islogin = true;
+   if($islogin){
+    echo"user loged in <br> ";
+     }
+    else
+      {
+      echo "user is not loged in  <br>  " ;
+      
+    }
+  
+  
+  ?>
+<?php 
+$age= 20;
+echo"my age is $age . <br>";
+
+?>
+<?php 
+$firstname= "saurabh";
+$lastname= "patel";
+echo "name : $firstname $lastname <br>";
+
+
+?>
+
+
+
+<?php 
+$num = "100";
+
+echo $num/ 10 . "<br>" ;
+
+?>
+<?php 
+$country= "india";
+echo" you are form $country";
+echo "<br>";
+echo ("<h1>this is a Array </h1>") ;
+$nameaa = array("saurabh","shivam","satyam","sundram");
+echo $nameaa[0] ." ". $nameaa[1] . " " . $nameaa[2] . " " . $nameaa[3] ;
+ $a = "my name is" ;
+$name = "saurabh";
+echo "<br>";
+echo $a." ". $name ;
+echo implode(", ", $nameaa);
+
+// while loop in php
+echo ("<h1>this is a while loop  </h1>") ;
+$a = 0;
+   while($a <=20){
+    echo "<br> the value of a is : ";
+    echo $a;
+    $a++;
+   }
+
+    // iterating  arrays in php using  while loop 
+   echo ("<h1>iterating  arrays in php using  while loop   </h1>") ;
+$a = 0;
+   while($a <count($nameaa)){
+    echo "<br> the value of a is : ";
+    echo $nameaa [ $a];
+    $a++;
+   }
+
+
+
+      // iterating  arrays in php using do while loop 
+   echo ("<h1>iterating  arrays in php using do  while loop   </h1>") ;
+$a = 0;
+  do while($a <count($nameaa)){
+    echo "<br> the value of a is : ";
+    echo $nameaa [ $a];
+    $a++;
+   }  while($a <count($nameaa))
+   
+   
+?>
+
+
+<?php 
+
+// iterating arrays in php using for loop
+$nameaa = array("saurabh","shivam","satyam","sundram");
+$rrr = ["saurabh","shivam","satyam","sundram"];
+echo ("<pre>") ;
+var_dump($nameaa);
+echo ("<pre>") ;
+var_dump($rrr);
+die();
+
+echo "<h1>Iterating arrays in PHP using for loop</h1>";
+
+for($i = 0; $i < count($nameaa); $i++){
+    echo $nameaa[$i] . "<br>";
+}
+
+?>
+
+<?php 
+echo("<h1>for each loop is uses in php</h1>");
+$nameaa = array("saurabh","shivam","satyam","sundram");
+  foreach($nameaa as $nameaa){
+    echo "<br> the value from for each loop is ";
+    echo $nameaa;  } 
+echo("<h1>function use in php</h1>");
+function print5(){
+  echo "FIVE";
+
+
+}
+echo("<br>");
+print5 ();
+echo("<br>");
+print5 ();
+echo("<br>");
+print5 ();
+echo("<br>");
+print5 ();
+echo("<br>");
+print5 ();
+echo("<h1>function use in php</h1>");
+function print_number ($number){
+  echo "<br> your number is ";
+  echo $number;
+}
+
+print_number (125);
+print_number (100);
+print_number (200);
+print_number (258);
+print_number (1552);
+print_number (2410);
+
+
+?>
+*/ -->

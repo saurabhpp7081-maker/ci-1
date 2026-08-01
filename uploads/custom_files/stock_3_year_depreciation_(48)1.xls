@@ -1,0 +1,211 @@
+
+<table border='1' cellpadding='8' cellspacing='0' style='border-collapse:collapse; width:100%;'>
+<tr style='background:#dbeafe; font-weight:bold; text-align:center;'>
+    <th>Sn.</th>
+      <th>Product Name</th>
+       <th>Purchase Year</th>
+           <th>Quantity</th>
+        <th>Original Cost</th>
+    <th>Year-1 </th>
+    <th>Year-2 </th>
+        <th>Year-3 </th>
+</tr>
+
+    <tr>
+        <td align='center'>1</td>
+        <td>Aladdin Pope</td>
+        <td align='center'>2014</td>
+        <td align='center'>3</td>
+        <td align='right'>1537.2</td>
+        <td align='right'>1368.11</td>
+        <td align='right'>1217.62</td>
+        <td align='right'>1083.68</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>2</td>
+        <td>Alice Juarez</td>
+        <td align='center'>2014</td>
+        <td align='center'>2</td>
+        <td align='right'>960</td>
+        <td align='right'>854.4</td>
+        <td align='right'>760.42</td>
+        <td align='right'>676.77</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>3</td>
+        <td>Alice Juarez</td>
+        <td align='center'>2014</td>
+        <td align='center'>2</td>
+        <td align='right'>960</td>
+        <td align='right'>854.4</td>
+        <td align='right'>760.42</td>
+        <td align='right'>676.77</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>4</td>
+        <td>saurabh</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>5</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>6</td>
+        <td>dsfddf</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>7</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>8</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2026</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>9</td>
+        <td>Camden Booker</td>
+        <td align='center'>2024</td>
+        <td align='center'>2</td>
+        <td align='right'>271.2</td>
+        <td align='right'>241.37</td>
+        <td align='right'>214.82</td>
+        <td align='right'>191.19</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>10</td>
+        <td>Summer Farmer</td>
+        <td align='center'>2025</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>11</td>
+        <td>Yardley Aguilar</td>
+        <td align='center'>2022</td>
+        <td align='center'>2</td>
+        <td align='right'>1922.4</td>
+        <td align='right'>1710.94</td>
+        <td align='right'>1522.73</td>
+        <td align='right'>1355.23</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>12</td>
+        <td>Emily Christensen</td>
+        <td align='center'>1997</td>
+        <td align='center'>2</td>
+        <td align='right'>480</td>
+        <td align='right'>427.2</td>
+        <td align='right'>380.21</td>
+        <td align='right'>338.39</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>13</td>
+        <td>Tana Lewis</td>
+        <td align='center'>2017</td>
+        <td align='center'>5</td>
+        <td align='right'>2400</td>
+        <td align='right'>2136</td>
+        <td align='right'>1901.04</td>
+        <td align='right'>1691.93</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>14</td>
+        <td>Dora </td>
+        <td align='center'>1984</td>
+        <td align='center'>8</td>
+        <td align='right'>9225.6</td>
+        <td align='right'>8210.78</td>
+        <td align='right'>7307.6</td>
+        <td align='right'>6503.76</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>15</td>
+        <td>saurabh patel </td>
+        <td align='center'>2026</td>
+        <td align='center'>1</td>
+        <td align='right'>120</td>
+        <td align='right'>106.8</td>
+        <td align='right'>95.05</td>
+        <td align='right'>84.6</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>16</td>
+        <td>debhrdn</td>
+        <td align='center'>1982</td>
+        <td align='center'>2</td>
+        <td align='right'>240</td>
+        <td align='right'>213.6</td>
+        <td align='right'>190.1</td>
+        <td align='right'>169.19</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>17</td>
+        <td>Timothy Pitts</td>
+        <td align='center'>1987</td>
+        <td align='center'>38</td>
+        <td align='right'>10077.6</td>
+        <td align='right'>8969.06</td>
+        <td align='right'>7982.47</td>
+        <td align='right'>7104.4</td>
+    </tr>
+    
+    <tr>
+        <td align='center'>18</td>
+        <td>Claudia Crosby</td>
+        <td align='center'>2019</td>
+        <td align='center'>3</td>
+        <td align='right'>2347.2</td>
+        <td align='right'>2089.01</td>
+        <td align='right'>1859.22</td>
+        <td align='right'>1654.7</td>
+    </tr>
+    </table>

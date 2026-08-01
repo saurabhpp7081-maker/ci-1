@@ -1,0 +1,177 @@
+
+<table cellspacing="0" cellpadding="6" width="100%" style="font-family:Calibri, Arial;">
+    
+    <!-- TITLE -->
+    <tr>
+        <td colspan="4" style="
+            font-size:18px;
+            font-weight:bold;
+            text-align:center;
+            padding:12px;
+        ">
+            Leads Report
+        </td>
+        <td style="padding:8px 12px;"><br />
+<b>Warning</b>:  Undefined variable $row in <b>C:\www\adminsystem\export\excel.php</b> on line <b>24</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\www\adminsystem\export\excel.php</b> on line <b>24</b><br />
+</td>
+<td style="padding:8px 12px;"><br />
+<b>Warning</b>:  Undefined variable $row in <b>C:\www\adminsystem\export\excel.php</b> on line <b>25</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\www\adminsystem\export\excel.php</b> on line <b>25</b><br />
+</td>
+
+    </tr>
+
+    <!-- DATE -->
+   <td colspan="4" style="
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    padding:14px;
+    color:#2f80ed;
+">
+
+        <td style="
+    text-align:center;
+    font-weight:bold;
+    color: <br />
+<b>Warning</b>:  Undefined variable $row in <b>C:\www\adminsystem\export\excel.php</b> on line <b>41</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\www\adminsystem\export\excel.php</b> on line <b>41</b><br />
+#dc3545;
+">
+    <br />
+<b>Warning</b>:  Undefined variable $row in <b>C:\www\adminsystem\export\excel.php</b> on line <b>43</b><br />
+<br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\www\adminsystem\export\excel.php</b> on line <b>43</b><br />
+<br />
+<b>Deprecated</b>:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in <b>C:\www\adminsystem\export\excel.php</b> on line <b>43</b><br />
+</td>
+
+    </tr>
+
+    <!-- SPACE -->
+    <tr><td colspan="4"></td></tr>
+
+    <!-- TABLE HEADER -->
+    <tr style="
+        background-color:#2f80ed;
+        color:#ffffff;
+        font-weight:bold;
+        text-align:center;
+    ">
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+        <td>Status</td>
+    </tr>
+
+    <!-- DATA -->
+        <tr style="background-color:#ffffff;">
+        <td>Emery Higgins</td>
+        <td>xywyjyxup@mailinator.com</td>
+        <td style="text-align:center;">+1 (216) 335-4069</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            New        </td>
+    </tr>
+        <tr style="background-color:#f4f6f8;">
+        <td>Felicia Riggs</td>
+        <td>hyzysabyho@mailinator.com</td>
+        <td style="text-align:center;">+1 (692) 736-1965</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Qualified        </td>
+    </tr>
+        <tr style="background-color:#ffffff;">
+        <td>Signe Bartlett</td>
+        <td>taxama@mailinator.com</td>
+        <td style="text-align:center;">+1 (366) 657-7712</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Qualified        </td>
+    </tr>
+        <tr style="background-color:#f4f6f8;">
+        <td>Zephania Fletcher</td>
+        <td>roreny@mailinator.com</td>
+        <td style="text-align:center;">+1 (494) 289-8911</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Qualified        </td>
+    </tr>
+        <tr style="background-color:#ffffff;">
+        <td>Aretha Travis</td>
+        <td>zapyvavive@mailinator.com</td>
+        <td style="text-align:center;">+1 (489) 133-3684</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Qualified        </td>
+    </tr>
+        <tr style="background-color:#f4f6f8;">
+        <td>Walker Bullock</td>
+        <td>wetilohize@mailinator.com</td>
+        <td style="text-align:center;">+1 (316) 809-1055</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Closed        </td>
+    </tr>
+        <tr style="background-color:#ffffff;">
+        <td>Julian Roy</td>
+        <td>xavyruxit@mailinator.com</td>
+        <td style="text-align:center;">+1 (738) 826-8824</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            New        </td>
+    </tr>
+        <tr style="background-color:#f4f6f8;">
+        <td>Adena Mullins</td>
+        <td>tuqo@mailinator.com</td>
+        <td style="text-align:center;">+1 (184) 259-3121</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Closed        </td>
+    </tr>
+        <tr style="background-color:#ffffff;">
+        <td>Mollie Donaldson</td>
+        <td>kejyz@mailinator.com</td>
+        <td style="text-align:center;">+1 (314) 471-9935</td>
+        <td style="
+            text-align:center;
+            font-weight:bold;
+            color:#dc3545        ">
+            Contacted        </td>
+    </tr>
+    
+    <!-- FOOTER -->
+  <tr>
+    <td colspan="4" style="
+        text-align:right;
+        font-size:11px;
+        color:#555;
+        padding-top:12px;
+        border-top:1px solid #ccc;
+    ">
+        Total Records: 9    </td>
+</tr>
+
+
+</table>
+
