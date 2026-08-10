@@ -24,6 +24,7 @@ class Taxes extends AdminController
     }
 
     /* Add or edit tax / ajax */
+    
     public function manage()
     {
         if ($this->input->post()) {

@@ -5,24 +5,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Student extends AdminController
 
 {
-    public function __construct()
-    {
-        parent::__construct();
+   public function __construct()
+{
+    parent::__construct();
+
+    $this->load->model('taxes_model');
+
+    if (!is_admin()) {
+        access_denied('Taxes');
+    }
 
         $this->load->model('student/Student_model');
         $this->load->library('form_validation');
+        // $this->load->helper('student');
     }
-    public function index()
-    {
-        $this->load->model('student/Student_model');
+  public function index()
+{
+    $data['title'] = _l('students');
 
-        $data['title'] = 'Students';
-
-        $data['students'] = $this->Student_model->get_all();
-
-        $this->load->view('manage', $data);
-    }
-
+    $this->load->view('manage', $data);
+}
 
 
     public function store()
@@ -81,10 +83,119 @@ class Student extends AdminController
 
 public function delete($id)
 {
-    echo $id;
+    if (!is_admin()) {
+        access_denied('Delete Student');
+    }
+
+    $deleted = $this->Student_model->delete($id);
+
+    if ($deleted) {
+        set_alert('success', 'Student deleted successfully');
+    } else {
+        set_alert('danger', 'Failed to delete student');
+    }
+
+    redirect(admin_url('student'));
+}
+public function table()
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $students = $this->Student_model->get_table_data();
+
+    $aaData = [];
+
+    foreach ($students as $student) {
+
+        $status = $student['status'] == 1
+            ? '<span class="label label-success">' . _l('active') . '</span>'
+            : '<span class="label label-danger">' . _l('inactive') . '</span>';
+
+        $actions = '';
+
+        $actions .= '<a href="javascript:void(0);"
+            onclick="editStudent(' . $student['id'] . ')"
+            class="btn btn-default btn-icon"
+            data-toggle="tooltip"
+            data-title="' . _l('edit') . '">
+            <i class="fa fa-pencil"></i>
+        </a>';
+
+        $actions .= ' ';
+
+        $actions .= '<a href="' . admin_url('student/delete/' . $student['id']) . '"
+            class="btn btn-default btn-icon _delete"
+            data-toggle="tooltip"
+            data-title="' . _l('delete') . '">
+            <i class="fa fa-trash"></i>
+        </a>';
+
+        $aaData[] = [
+            $student['id'],
+            $student['admission_no'],
+            $student['full_name'],
+            $student['phone'],
+            $student['course'],
+            $status,
+            $actions,
+        ];
+    }
+
+    echo json_encode([
+        'aaData' => $aaData,
+    ]);
+}
+
+
+public function get($id)
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $student = $this->Student_model->get($id);
+
+    if (!$student) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Student not found'
+        ]);
+        return;
+    }
+
+    echo json_encode([
+        'success' => true,
+        'data' => $student
+    ]);
 }
 
 
 
+public function update($id)
+{
+    if (!is_admin()) {
+        access_denied('Edit Student');
+    }
+
+    $data = [
+        'admission_no' => $this->input->post('admission_no', true),
+        'full_name'    => $this->input->post('full_name', true),
+        'phone'        => $this->input->post('phone', true),
+        'course'       => $this->input->post('course', true),
+        'status'       => $this->input->post('status', true),
+    ];
+
+    $updated = $this->Student_model->update($id, $data);
+
+    if ($updated) {
+        set_alert('success', 'Student updated successfully');
+    } else {
+        set_alert('danger', 'Failed to update student');
+    }
+
+    redirect(admin_url('student'));
+}
 
 }

@@ -4,123 +4,55 @@
 
 <div id="wrapper">
     <div class="content">
+       <div class="panel_s">
+    <div class="panel-body">
 
-        <div class="panel_s">
+        <div class="clearfix">
 
-            <div class="panel-body">
+            <h4 class="pull-left">
+                <?= _l('students'); ?>
+            </h4>
 
-                <div class="clearfix">
+            <div class="pull-right">
 
-                    <h4 class="pull-left">
-                        Students
-                    </h4>
+                <a href="#"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#student_modal">
 
-                    <div class="pull-right">
+                    <i class="fa fa-plus"></i>
+                    <?= _l('new_student'); ?>
 
-                        <a href="#" class="btn btn-primary"
-                            data-toggle="modal"
-                            data-target="#student_modal">
-
-                            <i class="fa fa-plus"></i>
-                            Add Student
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <hr>
-
-                <table class="table table-students">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>ID</th>
-
-                            <th>Admission No</th>
-
-                            <th>Name</th>
-
-                            <th>Phone</th>
-
-                            <th>Course</th>
-
-                            <th>Status</th>
-
-                            <th>Action</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <?php if (!empty($students)) { ?>
-
-                            <?php foreach ($students as $student) { ?>
-
-                                <tr>
-
-                                    <td><?= $student['id']; ?></td>
-
-                                    <td><?= $student['admission_no']; ?></td>
-
-                                    <td><?= $student['full_name']; ?></td>
-
-                                    <td><?= $student['phone']; ?></td>
-
-                                    <td><?= $student['course']; ?></td>
-
-                                    <td>
-
-                                        <?php if ($student['status'] == 1) { ?>
-
-                                            <span class="label label-success">
-                                                Active
-                                            </span>
-
-                                        <?php } else { ?>
-
-                                            <span class="label label-danger">
-                                                Inactive
-                                            </span>
-
-                                        <?php } ?>
-
-                                    </td>
-
-                                    <td>
-
-                                        <a href="javascript:void(0);"
-                                            onclick="editStudent(<?= $student['id']; ?>)"
-                                            class="btn btn-default btn-icon">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-
-                                        <a href="javascript:void(0)"
-                                            onclick="deleteStudent(<?= $student['id']; ?>)">
-                                            Delete
-                                        </a>
-
-                                    </td>
-
-                                </tr>
-
-                            <?php } ?>
-
-                        <?php } ?>
-
-                    </tbody>
-
-                </table>
+                </a>
 
             </div>
 
         </div>
 
+        <hr>
+
+        <?php
+
+        $table_data = [
+            _l('id'),
+            _l('admission_no'),
+            _l('student_name'),
+            _l('phone'),
+            _l('course'),
+            _l('status'),
+            _l('options'),
+        ];
+
+        render_datatable(
+            $table_data,
+            'students',
+            ['table-striped', 'table-hover']
+        );
+
+        ?>
+
+    </div>
+</div>
     </div>
 </div>
 

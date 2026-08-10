@@ -18,7 +18,8 @@
                             _l('tax_dt_name'),
                             _l('tax_dt_rate'),
                             _l('options'),
-                            ], 'taxes'); ?>
+                            ], 'taxes'); 
+                        ?>
                     </div>
                 </div>
             </div>

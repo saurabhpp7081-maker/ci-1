@@ -16,26 +16,64 @@ class Student_model extends App_Model
             ->get(db_prefix() . 'students')
             ->result_array();
     }
+
+
     public function add(array $data)
     {
-        $insert = $this->db->insert(db_prefix() . 'students', $data);
+        $insert = $this->db->insert(
+            db_prefix() . 'students',
+            $data
+        );
 
         if (!$insert) {
-            echo "<pre>";
+            echo '<pre>';
             print_r($this->db->error());
-            echo "<br><br>";
+            echo '</pre>';
+
             echo $this->db->last_query();
+
             exit;
         }
+
         return $this->db->insert_id();
     }
-public function delete($id)
+
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id);
+
+        return $this->db->delete(
+            db_prefix() . 'students'
+        );
+    }
+
+
+    /**
+     * Get students for DataTable
+     */
+    public function get_table_data()
+    {
+        $this->db->select([
+            'id',
+            'admission_no',
+            'full_name',
+            'phone',
+            'course',
+            'status',
+        ]);
+
+        $this->db->from(db_prefix() . 'students');
+
+        return $this->db->get()->result_array();
+    }
+
+
+    public function get($id)
 {
-    $this->db->where('id', $id);
-
-    return $this->db->delete(db_prefix().'students');
+    return $this->db
+        ->where('id', $id)
+        ->get(db_prefix() . 'students')
+        ->row_array();
 }
-
-
-
 }
