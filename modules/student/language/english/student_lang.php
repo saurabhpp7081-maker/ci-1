@@ -1,0 +1,66 @@
+<?php
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
+|--------------------------------------------------------------------------
+| Student Module Language
+|--------------------------------------------------------------------------
+*/
+
+$lang['student'] = 'Student';
+$lang['students'] = 'Students';
+
+$lang['new_student'] = 'New Student';
+$lang['add_student'] = 'Add Student';
+$lang['edit_student'] = 'Edit Student';
+$lang['student_details'] = 'Student Details';
+
+$lang['admission_no'] = 'Admission No';
+$lang['roll_no'] = 'Roll No';
+$lang['full_name'] = 'Student Name';
+$lang['father_name'] = 'Father Name';
+$lang['mother_name'] = 'Mother Name';
+$lang['email'] = 'Email';
+$lang['phone'] = 'Phone';
+$lang['gender'] = 'Gender';
+$lang['dob'] = 'Date of Birth';
+$lang['class'] = 'Class';
+$lang['section'] = 'Section';
+$lang['course'] = 'Course';
+$lang['address'] = 'Address';
+$lang['status'] = 'Status';
+
+$lang['active'] = 'Active';
+$lang['inactive'] = 'Inactive';
+
+$lang['male'] = 'Male';
+$lang['female'] = 'Female';
+$lang['other'] = 'Other';
+
+$lang['save'] = 'Save';
+$lang['update'] = 'Update';
+$lang['cancel'] = 'Cancel';
+$lang['close'] = 'Close';
+
+$lang['edit'] = 'Edit';
+$lang['delete'] = 'Delete';
+$lang['view'] = 'View';
+
+$lang['student_added_successfully'] = 'Student added successfully.';
+$lang['student_updated_successfully'] = 'Student updated successfully.';
+$lang['student_deleted_successfully'] = 'Student deleted successfully.';
+
+$lang['problem_adding_student'] = 'There was a problem adding the student.';
+$lang['problem_updating_student'] = 'There was a problem updating the student.';
+$lang['problem_deleting_student'] = 'There was a problem deleting the student.';
+
+$lang['student_not_found'] = 'Student not found.';
+$lang['invalid_student_id'] = 'Invalid student ID.';
+
+$lang['unable_to_load_student'] = 'Unable to load student data.';
+$lang['no_data_received'] = 'No data received.';
+
+$lang['confirm_delete_student'] = 'Are you sure you want to delete this student?';
+$lang['student_information'] = 'Student Information';
+$lang['student_name'] = 'Student Name';

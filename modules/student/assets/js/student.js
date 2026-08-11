@@ -17,7 +17,8 @@ $(function () {
         section: 'required',
         course: 'required',
         address: 'required',
-        status: 'required'
+        
+        
     });
 
     $('#student_modal').on('hidden.bs.modal', function () {
@@ -110,3 +111,4 @@ function deleteStudent(id)
         window.location.href = admin_url + 'student/delete/' + id;
     }
 }
+
