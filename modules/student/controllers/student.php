@@ -18,7 +18,8 @@ class Student extends AdminController
         $this->load->model('student/Student_model');
         $this->load->library('form_validation');
         $this->lang->load('student', 'english');
-        // $this->load->helper('student');
+        $this->load->model('student/Department_model');
+        
     }
     public function index()
     {
@@ -253,4 +254,402 @@ class Student extends AdminController
 
         redirect(admin_url('student'));
     }
+
+
+public function departments()
+{
+    if (!is_admin()) {
+        access_denied('Students');
+    }
+
+    $data['title'] = 'Departments';
+
+    $this->load->view(
+        'student/departments/manage',
+        $data
+    );
+
+
+}
+
+
+
+public function departments_table()
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $aColumns = [
+        'name',
+        'status',
+    ];
+
+    $sIndexColumn = 'id';
+
+    // IMPORTANT:
+    // Student module ka apna table
+    $sTable = db_prefix() . 'student_departments';
+
+    $join = [];
+
+    $where = [];
+
+    $additionalSelect = [
+        'id',
+    ];
+
+    $result = data_tables_init(
+        $aColumns,
+        $sIndexColumn,
+        $sTable,
+        $join,
+        $where,
+        $additionalSelect
+    );
+
+    $output  = $result['output'];
+    $rResult = $result['rResult'];
+
+    foreach ($rResult as $department) {
+
+        $row = [];
+
+       
+        $row[] = e($department['name']);
+
+
+        
+
+        if ((int) $department['status'] === 1) {
+
+            $row[] = '<span class="label label-success">'
+                . _l('active')
+                . '</span>';
+
+        } else {
+
+            $row[] = '<span class="label label-danger">'
+                . _l('inactive')
+                . '</span>';
+        }
+
+
+      
+       $actions = '';
+
+$actions .= '<a href="javascript:void(0);"
+    onclick="editDepartment(' . $department['id'] . ')"
+    class="btn btn-default btn-icon"
+    data-toggle="tooltip"
+    data-title="' . _l('edit') . '">
+    <i class="fa fa-pencil"></i>
+</a>';
+
+$actions .= ' ';
+
+$actions .= '<a href="' . admin_url('student/delete_department/' . $department['id']) . '"
+    class="btn btn-default btn-icon _delete"
+    data-toggle="tooltip"
+    data-title="' . _l('delete') . '">
+    <i class="fa fa-trash"></i>
+</a>';
+
+$row[] = $actions;
+        $row[] = $actions;
+
+
+      
+
+        $output['aaData'][] = $row;
+    }
+
+    echo json_encode($output);
+}
+
+
+public function add_department()
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $this->form_validation->set_rules(
+        'name',
+        'Department Name',
+        'required|trim|min_length[2]|max_length[100]'
+    );
+
+    
+
+    if ($this->form_validation->run() === false) {
+
+        echo json_encode([
+            'success' => false,
+            'message' => strip_tags(validation_errors())
+        ]);
+
+        return;
+    }
+
+    $name   = trim($this->input->post('name', true));
+    $status = (int) $this->input->post('status');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Duplicate Check
+    |--------------------------------------------------------------------------
+    */
+
+    if ($this->Department_model->exists($name, 0)) {
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'Department name already exists.'
+        ]);
+
+        return;
+    }
+
+
+    $data = [
+        'name'       => $name,
+        'status'     => $status,
+        'created_at' => date('Y-m-d H:i:s'),
+        'updated_at' => date('Y-m-d H:i:s'),
+    ];
+
+
+    $insert_id = $this->Department_model->add($data);
+
+
+    if ($insert_id) {
+
+        echo json_encode([
+            'success' => true,
+            'message' => 'Department added successfully.',
+            'id'      => $insert_id,
+        ]);
+
+    } else {
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'Failed to add department.'
+        ]);
+    }
+}
+
+
+public function get_department($id)
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $id = (int) $id;
+
+    if (!$id) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Invalid department ID.'
+        ]);
+        return;
+    }
+
+    $department = $this->Department_model->get($id);
+
+    if (!$department) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Department not found.'
+        ]);
+        return;
+    }
+
+    echo json_encode([
+        'success' => true,
+        'data'    => $department
+    ]);
+}
+
+
+public function update_department($id)
+{
+    if (!is_admin()) {
+        ajax_access_denied();
+    }
+
+    $id = (int) $id;
+
+    if (!$id) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Invalid department ID.'
+        ]);
+        return;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Check Department
+    |--------------------------------------------------------------------------
+    */
+
+    $department = $this->Department_model->get($id);
+
+    if (!$department) {
+        echo json_encode([
+            'success' => false,
+            'message' => 'Department not found.'
+        ]);
+        return;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Validation
+    |--------------------------------------------------------------------------
+    */
+
+    $this->form_validation->set_rules(
+        'name',
+        'Department Name',
+        'required|trim|min_length[2]|max_length[100]'
+    );
+
+  
+
+    if ($this->form_validation->run() === false) {
+
+        echo json_encode([
+            'success' => false,
+            'message' => strip_tags(
+                validation_errors()
+            )
+        ]);
+
+        return;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Get Form Data
+    |--------------------------------------------------------------------------
+    */
+
+    $name = trim(
+        $this->input->post('name', true)
+    );
+
+    $status = (int) $this->input->post('status');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Duplicate Department Check
+    |--------------------------------------------------------------------------
+    |
+    | Current department ID ko exclude karega.
+    |
+    */
+
+    $exists = $this->Department_model->exists(
+        $name,
+        $id
+    );
+
+    if ($exists) {
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'Department name already exists.'
+        ]);
+
+        return;
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Update Data
+    |--------------------------------------------------------------------------
+    */
+
+    $data = [
+        'name'       => $name,
+        'status'     => $status,
+        'updated_at' => date('Y-m-d H:i:s'),
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Update Department
+    |--------------------------------------------------------------------------
+    */
+
+    $updated = $this->Department_model->update(
+        $id,
+        $data
+    );
+
+    /*
+    |--------------------------------------------------------------------------
+    | Response
+    |--------------------------------------------------------------------------
+    */
+
+    if ($updated) {
+
+        echo json_encode([
+            'success' => true,
+            'message' => 'Department updated successfully.'
+        ]);
+
+    } else {
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'Failed to update department.'
+        ]);
+    }
+}
+
+public function delete_department($id)
+{
+    if (!is_admin()) {
+        access_denied('Delete Department');
+    }
+
+    $id = (int) $id;
+
+    if (!$id) {
+        set_alert('danger', 'Invalid department ID.');
+        redirect(admin_url('student/departments'));
+    }
+
+    $department = $this->Department_model->get($id);
+
+    if (!$department) {
+        set_alert('danger', 'Department not found.');
+        redirect(admin_url('student/departments'));
+    }
+
+    $deleted = $this->Department_model->delete($id);
+
+    if ($deleted) {
+        set_alert(
+            'success',
+            'Department deleted successfully.'
+        );
+    } else {
+        set_alert(
+            'danger',
+            'Failed to delete department.'
+        );
+    }
+
+    redirect(admin_url('student/departments'));
+}
+
+
 }

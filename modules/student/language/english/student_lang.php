@@ -64,3 +64,22 @@ $lang['no_data_received'] = 'No data received.';
 $lang['confirm_delete_student'] = 'Are you sure you want to delete this student?';
 $lang['student_information'] = 'Student Information';
 $lang['student_name'] = 'Student Name';
+
+
+
+
+$lang['new_department'] = 'New Department';
+$lang['department_name'] = 'Department Name';
+$lang['active'] = 'Active';
+$lang['inactive'] = 'Inactive';
+$lang['status'] = 'Status';
+$lang['close'] = 'Close';
+$lang['submit'] = 'Submit';
+
+$lang['departments'] = 'Departments';
+$lang['department_added_successfully'] = 'Department added successfully.';
+$lang['department_updated_successfully'] = 'Department updated successfully.';
+$lang['department_deleted_successfully'] = 'Department deleted successfully.';
+$lang['department_already_exists'] = 'Department already exists.';
+$lang['department_not_found'] = 'Department not found.';
+$lang['department_name_required'] = 'Department name is required.';
