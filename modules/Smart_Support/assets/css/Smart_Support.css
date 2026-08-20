@@ -1,0 +1,25 @@
+/*
+| FIX: Force visible text/color on tickets table
+| Kisi theme/placeholder CSS ke wajah se text invisible tha,
+| yeh rule usko override karega.
+*/
+
+#ssx_tickets_table {
+    background: transparent !important;
+}
+
+#ssx_tickets_table tbody tr {
+    background: #fff !important;
+}
+
+#ssx_tickets_table tbody td {
+    color: #333 !important;
+    background: transparent !important;
+    opacity: 1 !important;
+}
+
+#ssx_tickets_table tbody td a,
+#ssx_tickets_table tbody td span {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

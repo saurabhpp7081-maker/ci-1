@@ -82,4 +82,37 @@ class Department_model extends App_Model
                 $this->table
             ) > 0;
     }
+
+    public function get_all()
+    {
+        return $this->db->get(db_prefix() . 'student_departments')->result_array();
+    }
+
+
+    public function get_students_by_department()
+{
+    $students = db_prefix() . 'students';
+    $departments = db_prefix() . 'student_departments';
+
+    return $this->db
+        ->select(
+            $departments . '.name AS department_name,
+            COUNT(' . $students . '.id) AS total'
+        )
+        ->from($departments)
+        ->join(
+            $students,
+            $students . '.department_id = ' . $departments . '.id',
+            'left'
+        )
+        ->group_by($departments . '.id')
+        ->order_by('total', 'DESC')
+        ->get()
+        ->result_array();
+}
+
+
+
+
+
 }

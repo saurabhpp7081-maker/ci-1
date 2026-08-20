@@ -11,11 +11,19 @@ Version:1.0.0
 define('STUDENT_MODULE_NAME', 'student');
 register_language_files(STUDENT_MODULE_NAME, ['student']);
 register_activation_hook(STUDENT_MODULE_NAME, 'student_module_activate');
-register_uninstall_hook(STUDENT_MODULE_NAME, 'student_uninstall');
+// register_uninstall_hook(STUDENT_MODULE_NAME, 'student_uninstall');
 
 hooks()->add_action('admin_init', 'student_init_menu');
 hooks()->add_action('app_admin_footer', 'student_footer');
 hooks()->add_action('admin_navbar_start', 'student_top_nav');
+// hooks()->add_action(
+//     'after_dashboard',
+//     'student_dashboard_overview'
+// );
+
+hooks()->add_filter('get_dashboard_widgets', 'student_dashboard_widgets');
+
+
 
 // setup sidebar menu hook 
 hooks()->add_filter('setup_menu_items', 'student_setup_menu_items', 999);
@@ -28,7 +36,7 @@ function student_module_activate()
 {
     $CI = &get_instance();
 
-    require_once(__DIR__ . '/install.php');
+        require_once(__DIR__ . '/install.php');
 }
 
 
@@ -84,6 +92,13 @@ function student_setup_menu_items($items)
                 'position' => 1,
                 'icon'     => '.....',
             ],
+            [
+                'name'     => 'Courses',
+                'slug'     => 'student-courses',
+                'href'     => admin_url('student/courses'),
+                'position' => 2,
+                'icon'     => '.....',
+            ],
         ],
     ];
 
@@ -92,39 +107,71 @@ function student_setup_menu_items($items)
 
 
 
-function student_uninstall()
+// function student_uninstall()
+// {
+//     $CI = &get_instance();
+
+//     log_message('error', '=== STUDENT UNINSTALL STARTED ===');
+
+//     $students_table = db_prefix() . 'students';
+//     $departments_table = db_prefix() . 'departments';
+
+//     log_message('error', 'Checking table: ' . $students_table);
+
+//     if ($CI->db->table_exists($students_table)) {
+
+//         log_message('error', 'students table found, attempting drop...');
+
+//         $CI->db->query('DROP TABLE `' . $students_table . '`');
+
+//         $db_error = $CI->db->error();
+//         if (!empty($db_error['message'])) {
+//             log_message('error', 'DROP students ERROR: ' . print_r($db_error, true));
+//         } else {
+//             log_message('error', 'STUDENTS TABLE DROPPED: ' . $students_table);
+//         }
+
+//     } else {
+//         log_message('error', 'students table NOT FOUND — nothing to drop');
+//     }
+
+//     if ($CI->db->table_exists($departments_table)) {
+
+//         log_message('error', 'departments table found, attempting drop...');
+
+//         $CI->db->query('DROP TABLE `' . $departments_table . '`');
+
+//         $db_error = $CI->db->error();
+//         if (!empty($db_error['message'])) {
+//             log_message('error', 'DROP departments ERROR: ' . print_r($db_error, true));
+//         } else {
+//             log_message('error', 'DEPARTMENTS TABLE DROPPED: ' . $departments_table);
+//         }
+
+//     } else {
+//         log_message('error', 'departments table NOT FOUND — nothing to drop');
+//     }
+
+//     log_message('error', '=== STUDENT UNINSTALL FINISHED ===');
+// }
+
+
+
+
+
+
+
+
+
+/**
+ * Register Student Dashboard Widget
+ */
+function student_dashboard_widgets($widgets)
 {
-    $CI = &get_instance();
+    $widgets[] = [
+        'path'      => 'student/dashboard/overview',
+        'container' => 'left-8',
+    ];
 
-    log_message(
-        'error',
-        'STUDENT MODULE UNINSTALL HOOK STARTED'
-    );
-
-    $students_table = db_prefix() . 'students';
-    $departments_table = db_prefix() . 'departments';
-
-    if ($CI->db->table_exists($students_table)) {
-
-        $CI->db->query(
-            'DROP TABLE `' . $students_table . '`'
-        );
-
-        log_message(
-            'error',
-            'STUDENTS TABLE DROPPED: ' . $students_table
-        );
-    }
-
-    if ($CI->db->table_exists($departments_table)) {
-
-        $CI->db->query(
-            'DROP TABLE `' . $departments_table . '`'
-        );
-
-        log_message(
-            'error',
-            'DEPARTMENTS TABLE DROPPED: ' . $departments_table
-        );
-    }
+    return $widgets;
 }

@@ -49,14 +49,21 @@
 
                 <?= render_date_input('dob', 'Date of Birth'); ?>
 
-                <?= render_input('class', 'Class'); ?>
+                <?= render_select(
+                    'department_id',
+                    $departments,
+                    ['id', 'name'],
+                    'Department'
+                ); ?>
 
-                <?= render_input('section', 'Section'); ?>
-
-                <?= render_input('course', 'Course'); ?>
+                <?= render_select(
+                    'course_id',
+                    $courses,
+                    ['id', 'name'],
+                    'Course'
+                ); ?>
 
                 <?= render_textarea('address', 'Address'); ?>
-
                 <?= render_select(
                     'status',
                     [

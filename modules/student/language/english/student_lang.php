@@ -83,3 +83,34 @@ $lang['department_deleted_successfully'] = 'Department deleted successfully.';
 $lang['department_already_exists'] = 'Department already exists.';
 $lang['department_not_found'] = 'Department not found.';
 $lang['department_name_required'] = 'Department name is required.';
+
+
+
+$lang['courses'] = 'Courses';
+$lang['new_course'] = 'New Course';
+$lang['course_name'] = 'Course Name';
+
+
+$lang['student_overview'] = 'Student Overview';
+
+$lang['student_total_students'] = 'Total Students';
+$lang['student_active_students'] = 'Active Students';
+$lang['student_inactive_students'] = 'Inactive Students';
+$lang['student_this_month'] = 'This Month';
+
+
+$lang['student_dashboard_summary'] = 'Student management overview and statistics';
+
+$lang['student_total'] = 'Total';
+$lang['student_active'] = 'Active';
+$lang['student_inactive'] = 'Inactive';
+$lang['student_new_this_month'] = 'New This Month';
+
+$lang['student_course_wise_students'] = 'Course Wise Students';
+$lang['student_department_wise_students'] = 'Department Wise Students';
+
+$lang['student_course_distribution'] = 'Student distribution by course';
+$lang['student_department_distribution'] = 'Student distribution by department';
+
+$lang['student_no_course_data'] = 'No course data found.';
+$lang['student_no_department_data'] = 'No department data found.';

@@ -38,17 +38,12 @@
                 <?= render_select(
                     'status',
                     [
-                        ['id' => 1,  'name' => _l('active')],
-                        ['id' => 0, 'name' => _l('inactive')],
+                        ['id' => '1',  'name' => _l('active')],
+                        ['id' => '2', 'name' => _l('inactive')],
                     ],
                     ['id', 'name'],
                     'status',
-                    1,
-                    [],
-                    [],
                     '',
-                    '',
-                    false
                 ); ?>
 
                 <input type="hidden" name="id" id="department_id">
